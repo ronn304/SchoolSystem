@@ -1,6 +1,6 @@
 <ol>
-    <li *ngFor="let student of myStudents">
+    <li *ngFor="let student of myStudents;let n = index">
         {{student.name}}
-        <button >Delete</button>
+        <button (click)="deleteStudent(true,n)" >Delete</button>
     </li>
 </ol>

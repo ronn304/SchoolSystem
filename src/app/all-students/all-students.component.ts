@@ -12,6 +12,15 @@ export class AllStudentsComponent implements OnInit {
     new Student('mercy munyi',91,5,9),
   ];
 
+  deleteStudent(deleteThis:any, index:any){
+    if (deleteThis) {
+      let deleteCheck = confirm(`Are You Sure You Want To Remove This Student?`)
+      if(deleteCheck) {
+        this.myStudents.splice(index,1);
+      }
+    }
+  }
+
 
   constructor() { }
 
