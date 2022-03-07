@@ -1,15 +1,24 @@
-<div id="top-content"><h1>All Students</h1> 
-<button id="new_student" class="btn btn-primary">New Student</button>
-</div> 
-<div id="students_list">
-<ol>
-    <li *ngFor="let student of myStudents;let n = index">
-        {{student.name}}
-        <button (click)="deleteStudent(true,n)" class="btn btn-danger">Delete</button>
-    </li>
-</ol>
-</div>
-<div id="student_form">
-<app-student-form (addStudent)="addNewStudent($event)" >
-</app-student-form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div id="top-content"><h1>All Students</h1></div>
+      <div id="students_list">
+        <ol>
+          <li *ngFor="let student of myStudents; let n = index">
+            {{ student.name }} | {{student.adm_number}} | {{student.class_level}} | {{student.age}}
+            <button (click)="deleteStudent(true, n)" class="btn btn-danger">
+              Delete
+            </button>
+            <hr>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="student_form">
+        <app-student-form (addStudent)="addNewStudent($event)">
+        </app-student-form>
+      </div>
+    </div>
+  </div>
 </div>

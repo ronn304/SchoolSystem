@@ -13,7 +13,6 @@ export class StudentFormComponent implements OnInit {
   submitStudent() {
     if(this.newStudent.name !='' && this.newStudent.adm_number > 0 && this.newStudent.class_level < 9 && this.newStudent.age > 0){
       this.addStudent.emit(this.newStudent);
-      alert(this.newStudent.name+this.newStudent.adm_number+this.newStudent.class_level+this.newStudent.age)
     }
     else{
       alert('check your input values')
