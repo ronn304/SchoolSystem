@@ -12,6 +12,7 @@ export class StudentFormComponent implements OnInit {
   @Output() addStudent = new EventEmitter<Student>();
   submitStudent() {
     this.addStudent.emit(this.newStudent);
+    alert(this.newStudent.name+this.newStudent.adm_number+this.newStudent.class_level+this.newStudent.age)
   }
 
   constructor() { }

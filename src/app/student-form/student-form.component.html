@@ -1,3 +1,16 @@
-<form action="">
+<form (ngSubmit)="submitStudent()" #studentForm="ngForm">
+    <label for="name">Student's Name</label><br>
+    <input type="text" name="name" id="name" [(ngModel)]="newStudent.name" #name="ngModel" required placeholder="john doe"><br>
+
+    <label for="adm_number">Admission Number</label><br>
+    <input type="number" name="adm_number" id="adm_number" [(ngModel)]="newStudent.adm_number" #adm_number="ngModel" required placeholder="0"><br>
+
+    <label for="class_level">Class</label><br>
+    <input type="number" name="class_level" id="class_level" [(ngModel)]="newStudent.class_level" #class_level="ngModel" required placeholder="0"><br>
+
+    <label for="age">Age</label><br>
+    <input type="number" name="age" id="age" [(ngModel)]="newStudent.age" #age="ngModel" required placeholder="0"><br>
+    <br>
+    <button id="submit" type="submit">Register</button><br>
     
 </form>
