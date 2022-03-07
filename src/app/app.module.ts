@@ -8,6 +8,8 @@ import { AllStudentsComponent } from './all-students/all-students.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

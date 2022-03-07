@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Student } from '../student';
 
 @Component({
   selector: 'app-student-form',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-form.component.css']
 })
 export class StudentFormComponent implements OnInit {
+
+  newStudent = new Student('',0,9,0);
+  @Output() addStudent = new EventEmitter<Student>();
+  submitStudent() {
+    this.addStudent.emit(this.newStudent);
+  }
 
   constructor() { }
 
