@@ -11,8 +11,14 @@ export class StudentFormComponent implements OnInit {
   newStudent = new Student('',0,9,0);
   @Output() addStudent = new EventEmitter<Student>();
   submitStudent() {
-    this.addStudent.emit(this.newStudent);
-    alert(this.newStudent.name+this.newStudent.adm_number+this.newStudent.class_level+this.newStudent.age)
+    if(this.newStudent.name !='' && this.newStudent.adm_number > 0 && this.newStudent.class_level < 9 && this.newStudent.age > 0){
+      this.addStudent.emit(this.newStudent);
+      alert(this.newStudent.name+this.newStudent.adm_number+this.newStudent.class_level+this.newStudent.age)
+    }
+    else{
+      alert('check your input values')
+    }
+    
   }
 
   constructor() { }
