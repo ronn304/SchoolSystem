@@ -21,6 +21,12 @@ export class AllStudentsComponent implements OnInit {
     }
   }
 
+  addNewStudent(newStudent:any){
+    let studentCount = this.myStudents.length;
+    
+    this.myStudents.push(newStudent);
+  }
+
 
   constructor() { }
 

@@ -1,0 +1,72 @@
+<h1>Add New Student</h1>
+<form (ngSubmit)="submitStudent()" #studentForm="ngForm">
+  <div class="form-group">
+    <label for="name">Student's Name</label><br />
+    <input
+      class="form-control"
+      type="text"
+      name="name"
+      id="name"
+      [(ngModel)]="newStudent.name"
+      #name="ngModel"
+      required
+      placeholder="john doe"
+    /><br />
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      <p>student name is required</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="adm_number">Admission Number</label><br />
+    <input
+      class="form-control"
+      type="number"
+      name="adm_number"
+      id="adm_number"
+      [(ngModel)]="newStudent.adm_number"
+      #adm_number="ngModel"
+      required
+      placeholder="0"
+    /><br />
+  </div>
+
+  <div class="form-group">
+    <label for="class_level">Class</label><br />
+    <input
+      class="form-control"
+      type="number"
+      name="class_level"
+      id="class_level"
+      [(ngModel)]="newStudent.class_level"
+      #class_level="ngModel"
+      required
+      placeholder="0"
+    /><br />
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label><br />
+    <input
+      class="form-control"
+      type="number"
+      name="age"
+      id="age"
+      [(ngModel)]="newStudent.age"
+      #age="ngModel"
+      required
+      placeholder="0"
+    /><br />
+  </div>
+
+  <br />
+
+  <button
+    id="submit"
+    type="submit"
+    class="btn btn-sm btn-info"
+    [disabled]="!studentForm.valid"
+  >
+    Register</button
+  ><br />
+</form>

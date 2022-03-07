@@ -1,0 +1,20 @@
+#top-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#top-content h1{
+    text-decoration: underline;
+    display: inline;
+    margin-left:15%;
+    
+}
+#top-content button{
+    position: absolute right 0;
+}
+#students_list li{
+    width: 100%;
+    margin-left: 25%;
+    margin-bottom: 4.5px;
+
+}
